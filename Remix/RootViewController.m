@@ -7,8 +7,8 @@
 //
 
 #import "RootViewController.h"
-#import "HomeViewController.h"
-#import "SettingViewController.h"
+#import "PreviewViewController.h"
+#import "ResultViewController.h"
 #import "TodoViewController.h"
 #import "NewTodoItemViewController.h"
 #import "XSegmentedButton.h"
@@ -26,8 +26,8 @@
 @property (weak, nonatomic) IBOutlet XSegmentedButton *leftNaviItems;
 
 @property(nonatomic,strong) TodoViewController *todoVC;
-@property(nonatomic,strong) HomeViewController *homeVC;
-@property(nonatomic,strong) SettingViewController *settingVC;
+@property(nonatomic,strong) PreviewViewController *homeVC;
+@property(nonatomic,strong) ResultViewController *settingVC;
 
 @property(nonatomic,weak) UIViewController *currentVC;
 
@@ -63,10 +63,10 @@ static RootViewController* instance;
     self.todoVC = [TodoViewController new];
     self.todoVC.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.todoVC];
-    self.homeVC = [HomeViewController new];
+    self.homeVC = [PreviewViewController new];
     self.homeVC.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.homeVC];
-    self.settingVC = [SettingViewController new];
+    self.settingVC = [ResultViewController new];
     self.settingVC.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.settingVC];
     

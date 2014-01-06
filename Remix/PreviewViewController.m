@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Schiffer Li. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "PreviewViewController.h"
 #import "VRGCalendarView.h"
 #import "Gobal.h"
 #import "TodoItem+Util.h"
 #import "PlanItemCell.h"
 
-@interface HomeViewController ()<VRGCalendarViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface PreviewViewController ()<VRGCalendarViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *calendarContainer;
 @property (strong,nonatomic) VRGCalendarView *vrgCalendar;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *calendarCHeight;
@@ -25,7 +25,7 @@
 @property(strong,nonatomic) NSMutableArray *currentDayPMEvents;
 @end
 
-@implementation HomeViewController
+@implementation PreviewViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

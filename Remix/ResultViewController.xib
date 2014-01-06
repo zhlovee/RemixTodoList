@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController">
             <connections>
                 <outlet property="arrowConstraint" destination="Wpb-jl-m4V" id="6W7-Mf-agM"/>
                 <outlet property="bodyView" destination="oQ2-ES-FaV" id="URM-st-fQU"/>

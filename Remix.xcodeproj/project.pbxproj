@@ -51,10 +51,10 @@
 		998E12D3184F1B5700E95558 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12CE184F1B5700E95558 /* IISideController.m */; };
 		998E12D4184F1B5700E95558 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12D0184F1B5700E95558 /* IIViewDeckController.m */; };
 		998E12D5184F1B5700E95558 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12D2184F1B5700E95558 /* IIWrapController.m */; };
-		998E12D9184F1C7D00E95558 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12D7184F1C7D00E95558 /* HomeViewController.m */; };
-		998E12DA184F1C7D00E95558 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998E12D8184F1C7D00E95558 /* HomeViewController.xib */; };
-		998E12E3184F1CAC00E95558 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12E1184F1CAC00E95558 /* SettingViewController.m */; };
-		998E12E4184F1CAC00E95558 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998E12E2184F1CAC00E95558 /* SettingViewController.xib */; };
+		998E12D9184F1C7D00E95558 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12D7184F1C7D00E95558 /* PreviewViewController.m */; };
+		998E12DA184F1C7D00E95558 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998E12D8184F1C7D00E95558 /* PreviewViewController.xib */; };
+		998E12E3184F1CAC00E95558 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12E1184F1CAC00E95558 /* ResultViewController.m */; };
+		998E12E4184F1CAC00E95558 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998E12E2184F1CAC00E95558 /* ResultViewController.xib */; };
 		998E12E9184F1CEE00E95558 /* TodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E12E7184F1CEE00E95558 /* TodoViewController.m */; };
 		998E12EA184F1CEE00E95558 /* TodoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998E12E8184F1CEE00E95558 /* TodoViewController.xib */; };
 		998E12EE184F22C200E95558 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998E12ED184F22C200E95558 /* QuartzCore.framework */; };
@@ -66,6 +66,7 @@
 		9992BBAD1859BBA700EF71C4 /* XBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9992BBAC1859BBA700EF71C4 /* XBaseViewController.m */; };
 		99A5CCEA1863E645000B09F6 /* todoList.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 99A5CCE91863E645000B09F6 /* todoList.jpeg */; };
 		99A5CCF2186401D0000B09F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A5CCF1186401D0000B09F6 /* Images.xcassets */; };
+		99ACAA8C187A935F003D3B14 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 99ACAA8B187A935F003D3B14 /* README.md */; };
 		99D24CAD187692F3005D431E /* ResultItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D24CAC187692F3005D431E /* ResultItemCell.m */; };
 		99D24CAF18769308005D431E /* ResultItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D24CAE18769308005D431E /* ResultItemCell.xib */; };
 		99D24CB818769403005D431E /* bell4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D24CB318769403005D431E /* bell4.png */; };
@@ -162,12 +163,12 @@
 		998E12D0184F1B5700E95558 /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
 		998E12D1184F1B5700E95558 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
 		998E12D2184F1B5700E95558 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
-		998E12D6184F1C7D00E95558 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		998E12D7184F1C7D00E95558 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		998E12D8184F1C7D00E95558 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		998E12E0184F1CAC00E95558 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		998E12E1184F1CAC00E95558 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		998E12E2184F1CAC00E95558 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		998E12D6184F1C7D00E95558 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		998E12D7184F1C7D00E95558 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		998E12D8184F1C7D00E95558 /* PreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewViewController.xib; sourceTree = "<group>"; };
+		998E12E0184F1CAC00E95558 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		998E12E1184F1CAC00E95558 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		998E12E2184F1CAC00E95558 /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		998E12E6184F1CEE00E95558 /* TodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoViewController.h; sourceTree = "<group>"; };
 		998E12E7184F1CEE00E95558 /* TodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoViewController.m; sourceTree = "<group>"; };
 		998E12E8184F1CEE00E95558 /* TodoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 		9992BBAC1859BBA700EF71C4 /* XBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBaseViewController.m; sourceTree = "<group>"; };
 		99A5CCE91863E645000B09F6 /* todoList.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = todoList.jpeg; sourceTree = "<group>"; };
 		99A5CCF1186401D0000B09F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		99ACAA8B187A935F003D3B14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		99D24CAB187692F3005D431E /* ResultItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultItemCell.h; sourceTree = "<group>"; };
 		99D24CAC187692F3005D431E /* ResultItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultItemCell.m; sourceTree = "<group>"; };
 		99D24CAE18769308005D431E /* ResultItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultItemCell.xib; sourceTree = "<group>"; };
@@ -266,9 +268,9 @@
 		992E8B84186EB85400F382F5 /* plan */ = {
 			isa = PBXGroup;
 			children = (
-				998E12D6184F1C7D00E95558 /* HomeViewController.h */,
-				998E12D7184F1C7D00E95558 /* HomeViewController.m */,
-				998E12D8184F1C7D00E95558 /* HomeViewController.xib */,
+				998E12D6184F1C7D00E95558 /* PreviewViewController.h */,
+				998E12D7184F1C7D00E95558 /* PreviewViewController.m */,
+				998E12D8184F1C7D00E95558 /* PreviewViewController.xib */,
 				992E8B89186FF5F100F382F5 /* PlanItemCell.h */,
 				992E8B8A186FF5F100F382F5 /* PlanItemCell.m */,
 				992E8B8C186FF60A00F382F5 /* PlanItemCell.xib */,
@@ -288,6 +290,7 @@
 		998E126B184F168600E95558 = {
 			isa = PBXGroup;
 			children = (
+				99ACAA8B187A935F003D3B14 /* README.md */,
 				998E127D184F168600E95558 /* Remix */,
 				998E1296184F168600E95558 /* RemixTests */,
 				998E1276184F168600E95558 /* Frameworks */,
@@ -489,9 +492,9 @@
 		99D24CAA1876928E005D431E /* chengjiu */ = {
 			isa = PBXGroup;
 			children = (
-				998E12E0184F1CAC00E95558 /* SettingViewController.h */,
-				998E12E1184F1CAC00E95558 /* SettingViewController.m */,
-				998E12E2184F1CAC00E95558 /* SettingViewController.xib */,
+				998E12E0184F1CAC00E95558 /* ResultViewController.h */,
+				998E12E1184F1CAC00E95558 /* ResultViewController.m */,
+				998E12E2184F1CAC00E95558 /* ResultViewController.xib */,
 				99D24CAB187692F3005D431E /* ResultItemCell.h */,
 				99D24CAC187692F3005D431E /* ResultItemCell.m */,
 				99D24CAE18769308005D431E /* ResultItemCell.xib */,
@@ -591,7 +594,8 @@
 				99A5CCF2186401D0000B09F6 /* Images.xcassets in Resources */,
 				992E8B18186A78E100F382F5 /* uncheck_30x30@2x.png in Resources */,
 				998E1282184F168600E95558 /* InfoPlist.strings in Resources */,
-				998E12E4184F1CAC00E95558 /* SettingViewController.xib in Resources */,
+				99ACAA8C187A935F003D3B14 /* README.md in Resources */,
+				998E12E4184F1CAC00E95558 /* ResultViewController.xib in Resources */,
 				9970B22D18613E2E00BA695D /* TodoItemCell.xib in Resources */,
 				99D24CE71877FD8C005D431E /* clock_30x30@2x.png in Resources */,
 				9970B216185FE35700BA695D /* TodoViewCellController.xib in Resources */,
@@ -604,7 +608,7 @@
 				99D24CE51877FA9B005D431E /* calendar_30x30.png in Resources */,
 				99D24CB818769403005D431E /* bell4.png in Resources */,
 				99D24CE31877F9FC005D431E /* grid_30x30.png in Resources */,
-				998E12DA184F1C7D00E95558 /* HomeViewController.xib in Resources */,
+				998E12DA184F1C7D00E95558 /* PreviewViewController.xib in Resources */,
 				9974C013187655C9004DC567 /* arrow_15x15@2x.png in Resources */,
 				99D24CAF18769308005D431E /* ResultItemCell.xib in Resources */,
 				998E12F7184F372F00E95558 /* NewTodoItemViewController.xib in Resources */,
@@ -640,7 +644,7 @@
 				998E12E9184F1CEE00E95558 /* TodoViewController.m in Sources */,
 				998E12F6184F372F00E95558 /* NewTodoItemViewController.m in Sources */,
 				9970B2331861A58400BA695D /* XCommonViewCell.m in Sources */,
-				998E12E3184F1CAC00E95558 /* SettingViewController.m in Sources */,
+				998E12E3184F1CAC00E95558 /* ResultViewController.m in Sources */,
 				992E8B6E186D0D7A00F382F5 /* TodoSubItem.m in Sources */,
 				998E12AF184F170C00E95558 /* NaviController.m in Sources */,
 				992E8B74186D0F2900F382F5 /* NSDateFormatter+Util.m in Sources */,
@@ -661,7 +665,7 @@
 				998E12F2184F2CB500E95558 /* AppContext.m in Sources */,
 				998E1284184F168600E95558 /* main.m in Sources */,
 				998E12CA184F1A6F00E95558 /* UIView+HandlePosition.m in Sources */,
-				998E12D9184F1C7D00E95558 /* HomeViewController.m in Sources */,
+				998E12D9184F1C7D00E95558 /* PreviewViewController.m in Sources */,
 				9970B215185FE35700BA695D /* TodoViewCellController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

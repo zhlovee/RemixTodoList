@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "XBaseViewController.h"
 
-@interface SettingViewController : XBaseViewController
+@interface ResultViewController : XBaseViewController
 
 @end

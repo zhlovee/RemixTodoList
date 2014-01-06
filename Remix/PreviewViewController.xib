@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewViewController">
             <connections>
                 <outlet property="amPlanItemList" destination="dMp-6t-Anm" id="NSS-Gh-ros"/>
                 <outlet property="amViewWidthConstraint" destination="LLt-vB-OrO" id="X82-bT-0D7"/>

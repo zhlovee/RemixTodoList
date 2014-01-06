@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Schiffer Li. All rights reserved.
 //
 
-#import "SettingViewController.h"
+#import "ResultViewController.h"
 #import "TodoItem+Util.h"
 #import "RNBlurModalView.h"
 #import "XSegmentedButton.h"
 #import "ResultItemCell.h"
 #import "Gobal.h"
 
-@interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ResultViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *unFinishedViewBtn;
@@ -26,7 +26,7 @@
 @property(nonatomic,strong) NSArray *unfinishedItems;
 @end
 
-@implementation SettingViewController
+@implementation ResultViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

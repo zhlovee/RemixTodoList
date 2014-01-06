@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "XBaseViewController.h"
 
-@interface HomeViewController : XBaseViewController
+@interface PreviewViewController : XBaseViewController
 
 @end
