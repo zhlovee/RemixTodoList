@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
             <connections>
                 <outlet property="bodyView" destination="WAU-t3-rEm" id="hXO-DT-3kc"/>
+                <outlet property="leftCwidth" destination="pLG-AM-zxg" id="C8U-7o-6Pb"/>
                 <outlet property="leftNaviBar" destination="os8-bc-2Xa" id="bYX-QA-Zos"/>
                 <outlet property="leftNaviItems" destination="A2f-WX-Bd7" id="BwG-IE-0EK"/>
                 <outlet property="view" destination="dp9-kT-g8G" id="bDr-lJ-bnZ"/>
@@ -18,24 +19,27 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="os8-bc-2Xa">
-                    <rect key="frame" x="0.0" y="0.0" width="60" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2f-WX-Bd7" customClass="XSegmentedButton">
-                            <rect key="frame" x="0.0" y="44" width="60" height="240"/>
+                            <rect key="frame" x="0.0" y="44" width="0.0" height="240"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" tag="123" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-Sy-RaS">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.90328467153284675" green="0.90328467153284675" blue="0.90328467153284675" alpha="1" colorSpace="deviceRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="grid_30x30.png">
                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="showTodoView:" destination="-1" eventType="touchUpInside" id="cof-Bs-Wez"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="456" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-kk-JON">
-                                    <rect key="frame" x="0.0" y="60" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="60" width="0.0" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="calendar_30x30.png">
@@ -45,18 +49,24 @@
                                     <state key="selected">
                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="showPlanView:" destination="-1" eventType="touchUpInside" id="IyF-eo-36v"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="789" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q60-HR-x0a">
-                                    <rect key="frame" x="0.0" y="120" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="120" width="0.0" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="list2_30x30.png">
                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="showResultView:" destination="-1" eventType="touchUpInside" id="eYM-xy-Nzx"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="888" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-BX-nfb">
-                                    <rect key="frame" x="0.0" y="180" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="180" width="0.0" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="setting_full_30x30.png">
@@ -66,6 +76,9 @@
                                     <state key="selected">
                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="showSettingView:" destination="-1" eventType="touchUpInside" id="k0f-3Y-3pQ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -98,27 +111,36 @@
                         <constraint firstAttribute="trailing" secondItem="A2f-WX-Bd7" secondAttribute="trailing" id="9zx-8v-nTb"/>
                         <constraint firstItem="A2f-WX-Bd7" firstAttribute="top" secondItem="os8-bc-2Xa" secondAttribute="top" constant="44" id="TDI-cU-VTd"/>
                         <constraint firstItem="A2f-WX-Bd7" firstAttribute="leading" secondItem="os8-bc-2Xa" secondAttribute="leading" id="dvx-Ln-apr"/>
-                        <constraint firstAttribute="width" constant="60" placeholder="YES" id="pLG-AM-zxg"/>
+                        <constraint firstAttribute="width" id="pLG-AM-zxg"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAU-t3-rEm">
-                    <rect key="frame" x="60" y="0.0" width="260" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="dvo-Ud-fVD" appends="YES" id="3uh-gq-OgQ"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="WAU-t3-rEm" firstAttribute="top" secondItem="dp9-kT-g8G" secondAttribute="top" id="6gF-hg-LJh"/>
                 <constraint firstAttribute="bottom" secondItem="WAU-t3-rEm" secondAttribute="bottom" id="CLd-fA-nHk"/>
+                <constraint firstAttribute="trailing" secondItem="WAU-t3-rEm" secondAttribute="trailing" priority="1" placeholder="YES" id="TP5-7o-U6A"/>
                 <constraint firstItem="os8-bc-2Xa" firstAttribute="top" secondItem="dp9-kT-g8G" secondAttribute="top" id="aQ0-VK-24h"/>
-                <constraint firstAttribute="trailing" secondItem="WAU-t3-rEm" secondAttribute="trailing" priority="1" placeholder="YES" id="eQ1-3m-dj9"/>
                 <constraint firstItem="WAU-t3-rEm" firstAttribute="leading" secondItem="os8-bc-2Xa" secondAttribute="trailing" id="i2A-3i-6Fa"/>
                 <constraint firstAttribute="bottom" secondItem="os8-bc-2Xa" secondAttribute="bottom" id="l78-ZM-wnc"/>
                 <constraint firstItem="os8-bc-2Xa" firstAttribute="leading" secondItem="dp9-kT-g8G" secondAttribute="leading" id="tDH-4j-aYS"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="dvo-Ud-fVD">
+            <connections>
+                <action selector="doLeftNaviSwiped:" destination="-1" id="QeX-v7-vEk"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="calendar_30x30.png" width="30" height="31"/>

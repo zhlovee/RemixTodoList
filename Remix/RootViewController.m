@@ -12,6 +12,7 @@
 #import "TodoViewController.h"
 #import "NewTodoItemViewController.h"
 #import "XSegmentedButton.h"
+#import "ConfigViewController.h"
 #import "Gobal.h"
 
 #define LEFT_NAV_SCALE 0.2
@@ -22,12 +23,13 @@
 
 @property (weak, nonatomic) IBOutlet UIView *leftNaviBar;
 @property (weak, nonatomic) IBOutlet UIView *bodyView;
-@property(nonatomic,strong) NSLayoutConstraint *leftCwidth;
+@property(nonatomic,strong) IBOutlet NSLayoutConstraint *leftCwidth;
 @property (weak, nonatomic) IBOutlet XSegmentedButton *leftNaviItems;
 
 @property(nonatomic,strong) TodoViewController *todoVC;
-@property(nonatomic,strong) PreviewViewController *homeVC;
-@property(nonatomic,strong) ResultViewController *settingVC;
+@property(nonatomic,strong) PreviewViewController *planVC;
+@property(nonatomic,strong) ResultViewController *resultVC;
+@property(nonatomic,strong) ConfigViewController *settingVC;
 
 @property(nonatomic,weak) UIViewController *currentVC;
 
@@ -43,6 +45,59 @@ static RootViewController* instance;
         instance = [RootViewController new];
     });
     return instance;
+}
+- (IBAction)doLeftNaviSwiped:(UIPanGestureRecognizer*)grz {
+    CGFloat offestX = [grz translationInView:self.view].x;
+    [grz setTranslation:CGPointZero inView:self.view];
+    [LOGGER traceFloat:offestX];
+    static BOOL doSwipe = NO;
+    switch (grz.state) {
+        case UIGestureRecognizerStateBegan:{
+            if (isLeftOpened && offestX<0) {
+                doSwipe = YES;
+                self.leftCwidth.constant += offestX;
+                [self.view layoutIfNeeded];
+            }else if (!isLeftOpened && offestX>0){
+                doSwipe = YES;
+                self.leftCwidth.constant += offestX;
+                [self.view layoutIfNeeded];
+            }
+//            NSLog(@"1");
+            break;
+        }
+        case UIGestureRecognizerStateChanged:{
+            if (doSwipe) {
+                self.leftCwidth.constant += offestX;
+                if (self.leftCwidth.constant<0) {
+                    self.leftCwidth.constant = 0;
+                }else if (self.leftCwidth.constant>60){
+                    self.leftCwidth.constant = 60;
+                }
+                [self.view layoutIfNeeded];
+            }
+//            NSLog(@"2");
+            break;
+        }
+        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateFailed:{
+            doSwipe = NO;
+            if (self.leftCwidth.constant>30) {
+                self.leftCwidth.constant = 60;
+                isLeftOpened = YES;
+            }else{
+                self.leftCwidth.constant = 0;
+                isLeftOpened = NO;
+            }
+            [self.view layoutIfNeeded];
+            
+//            NSLog(@"3");
+            break;
+        }
+        default:{
+            break;
+        }
+    }
 }
 
 -(void)viewDidLoad
@@ -63,13 +118,15 @@ static RootViewController* instance;
     self.todoVC = [TodoViewController new];
     self.todoVC.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.todoVC];
-    self.homeVC = [PreviewViewController new];
-    self.homeVC.view.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addChildViewController:self.homeVC];
-    self.settingVC = [ResultViewController new];
+    self.planVC = [PreviewViewController new];
+    self.planVC.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addChildViewController:self.planVC];
+    self.resultVC = [ResultViewController new];
+    self.resultVC.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addChildViewController:self.resultVC];
+    self.settingVC = [ConfigViewController new];
     self.settingVC.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.settingVC];
-    
     //default view
     [self changeMainViewControllerTo:self.todoVC];
 }
@@ -79,16 +136,24 @@ static RootViewController* instance;
     [self changeMainViewControllerTo:self.todoVC];
     [self toggleLeftNavigationBar];
 }
+
+- (IBAction)showResultView:(UIButton*)sender {
+    [self.leftNaviItems selectWithTag:sender.tag];
+    [self changeMainViewControllerTo:self.resultVC];
+    [self toggleLeftNavigationBar];
+}
+
+- (IBAction)showPlanView:(UIButton*)sender {
+    [self.leftNaviItems selectWithTag:sender.tag];
+    [self changeMainViewControllerTo:self.planVC];
+    [self toggleLeftNavigationBar];
+}
 - (IBAction)showSettingView:(UIButton*)sender {
     [self.leftNaviItems selectWithTag:sender.tag];
     [self changeMainViewControllerTo:self.settingVC];
     [self toggleLeftNavigationBar];
 }
-- (IBAction)showHomeView:(UIButton*)sender {
-    [self.leftNaviItems selectWithTag:sender.tag];
-    [self changeMainViewControllerTo:self.homeVC];
-    [self toggleLeftNavigationBar];
-}
+
 
 -(void)changeMainViewControllerTo:(UIViewController *)toCtrl
 {
@@ -96,7 +161,6 @@ static RootViewController* instance;
         [self.bodyView addSubview:toCtrl.view];
         [toCtrl.view pinToSuperviewEdges:JRTViewPinAllEdges inset:0];
         [UIView transitionFromView:self.currentVC.view toView:toCtrl.view duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
-            
             [self.currentVC.view removeFromSuperview];
             [self.currentVC removeFromParentViewController];
             self.currentVC = toCtrl;
@@ -107,20 +171,16 @@ static RootViewController* instance;
 
 -(void)setDefaultConstraints
 {
-    self.leftCwidth = [self.leftNaviBar constrainWidthBySuperview:self.view multiplier:0];
+//    self.leftCwidth = [self.leftNaviBar constrainWidthBySuperview:self.view multiplier:0];
     [self.bodyView constrainWidthBySuperview:self.view multiplier:1];
     isLeftOpened = NO;
 }
 
 -(void)toggleLeftNavigationBar
 {
-    [self.view removeConstraint:self.leftCwidth];
     isLeftOpened = !isLeftOpened;
-    self.leftCwidth = [self.leftNaviBar constrainWidthBySuperview:self.view multiplier: LEFT_NAV_SCALE * isLeftOpened];
-    
-    [UIView animateWithDuration:.3 animations:^{
-        [self.view layoutIfNeeded];
-    }];
+    self.leftCwidth.constant = isLeftOpened?60:0;
+    [self.view layoutIfNeededWithDuriation:.3];
 }
 
 @end
