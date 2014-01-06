@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="arrowConstraint" destination="Wpb-jl-m4V" id="6W7-Mf-agM"/>
+                <outlet property="bodyView" destination="oQ2-ES-FaV" id="URM-st-fQU"/>
+                <outlet property="finishedViewBtn" destination="bAK-tQ-DEV" id="nfs-tE-6uV"/>
+                <outlet property="tableView" destination="kwf-rF-led" id="D6O-EQ-TgZ"/>
+                <outlet property="topPanel" destination="ac0-IO-Bdp" id="hvD-hD-fve"/>
+                <outlet property="unFinishedViewBtn" destination="guO-mY-dDO" id="PHu-W6-o94"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQ2-ES-FaV" userLabel="body">
+                    <rect key="frame" x="0.0" y="20" width="322" height="548"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBh-c2-ssP">
+                            <rect key="frame" x="0.0" y="0.0" width="322" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="效率" id="gTi-3T-HwI">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="Fqh-j5-OCa">
+                                        <connections>
+                                            <action selector="fdsbfc:" destination="-1" id="bmg-Pe-Qr3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ac0-IO-Bdp" customClass="XSegmentedButton">
+                            <rect key="frame" x="0.0" y="44" width="322" height="105"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" tag="123" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAK-tQ-DEV">
+                                    <rect key="frame" x="20" y="20" width="131" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.97951018810272217" green="1" blue="0.35592734813690186" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="10个任务已完成">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="finishedBtnPressed:" destination="-1" eventType="touchUpInside" id="QWF-f1-MWm"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guO-mY-dDO">
+                                    <rect key="frame" x="171" y="20" width="131" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.66614276170730591" green="0.99602079391479492" blue="0.99355441331863403" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" title="未完成">
+                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="finishedBtnPressed:" destination="-1" eventType="touchUpInside" id="kIX-vf-hP3"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q54-Ro-nnF">
+                                    <rect key="frame" x="0.0" y="103" width="326" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="os5-pq-l4R"/>
+                                    </constraints>
+                                </view>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow_15x15.png" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-5V-ZE4">
+                                    <rect key="frame" x="78" y="89" width="15" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.64104068280000004" green="0.87330043319999995" blue="0.99928122760000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="bAK-tQ-DEV" firstAttribute="leading" secondItem="ac0-IO-Bdp" secondAttribute="leading" constant="20" id="5JX-Ey-KeY"/>
+                                <constraint firstAttribute="bottom" secondItem="q54-Ro-nnF" secondAttribute="bottom" id="G5n-tp-d5s"/>
+                                <constraint firstItem="q54-Ro-nnF" firstAttribute="leading" secondItem="ac0-IO-Bdp" secondAttribute="leading" id="Mey-7A-cVe"/>
+                                <constraint firstAttribute="bottom" secondItem="lAS-5V-ZE4" secondAttribute="bottom" constant="1" id="Pjo-92-37Q"/>
+                                <constraint firstItem="guO-mY-dDO" firstAttribute="top" secondItem="ac0-IO-Bdp" secondAttribute="top" constant="20" id="TkO-S8-81S"/>
+                                <constraint firstAttribute="trailing" secondItem="guO-mY-dDO" secondAttribute="trailing" constant="20" id="UZJ-Fm-jLE"/>
+                                <constraint firstItem="lAS-5V-ZE4" firstAttribute="leading" secondItem="ac0-IO-Bdp" secondAttribute="leading" constant="78" id="Wpb-jl-m4V"/>
+                                <constraint firstAttribute="trailing" secondItem="q54-Ro-nnF" secondAttribute="trailing" constant="-4" id="Zu6-FW-bTj"/>
+                                <constraint firstAttribute="bottom" secondItem="bAK-tQ-DEV" secondAttribute="bottom" constant="20" id="bWw-pp-LcW"/>
+                                <constraint firstAttribute="bottom" secondItem="guO-mY-dDO" secondAttribute="bottom" constant="20" id="dPs-Sc-YsI"/>
+                                <constraint firstItem="bAK-tQ-DEV" firstAttribute="top" secondItem="ac0-IO-Bdp" secondAttribute="top" constant="20" id="jRw-1S-V4A"/>
+                                <constraint firstItem="guO-mY-dDO" firstAttribute="leading" secondItem="bAK-tQ-DEV" secondAttribute="trailing" constant="20" id="lj3-0w-xuW"/>
+                                <constraint firstItem="guO-mY-dDO" firstAttribute="width" secondItem="bAK-tQ-DEV" secondAttribute="width" id="mLe-ju-rfL"/>
+                                <constraint firstAttribute="height" constant="105" id="q19-04-ffC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-SO-oDO" userLabel="aaa">
+                            <rect key="frame" x="0.0" y="152" width="322" height="396"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kwf-rF-led">
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="396"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="oFi-1M-ZDo"/>
+                                        <outlet property="delegate" destination="-1" id="LVA-L7-cOu"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="396" id="aCA-LW-Cv2"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ac0-IO-Bdp" firstAttribute="leading" secondItem="oQ2-ES-FaV" secondAttribute="leading" id="264-2J-EKW"/>
+                        <constraint firstAttribute="trailing" secondItem="ac0-IO-Bdp" secondAttribute="trailing" id="XOq-u7-GsR"/>
+                        <constraint firstItem="h3t-SO-oDO" firstAttribute="leading" secondItem="oQ2-ES-FaV" secondAttribute="leading" id="cWf-MI-B9m"/>
+                        <constraint firstItem="h3t-SO-oDO" firstAttribute="top" secondItem="ac0-IO-Bdp" secondAttribute="bottom" constant="3" id="dEc-oG-0bW"/>
+                        <constraint firstItem="HBh-c2-ssP" firstAttribute="top" secondItem="oQ2-ES-FaV" secondAttribute="top" id="daD-g8-fA6"/>
+                        <constraint firstItem="HBh-c2-ssP" firstAttribute="leading" secondItem="oQ2-ES-FaV" secondAttribute="leading" id="dsO-3i-HUQ"/>
+                        <constraint firstItem="ac0-IO-Bdp" firstAttribute="top" secondItem="HBh-c2-ssP" secondAttribute="bottom" id="odU-wi-gvS"/>
+                        <constraint firstAttribute="trailing" secondItem="h3t-SO-oDO" secondAttribute="trailing" id="q75-t0-g7d"/>
+                        <constraint firstAttribute="trailing" secondItem="HBh-c2-ssP" secondAttribute="trailing" id="uwg-Mx-eU8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="oQ2-ES-FaV" secondAttribute="bottom" id="Wm1-na-S4F"/>
+                <constraint firstItem="oQ2-ES-FaV" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" placeholder="YES" id="iiU-xq-WRL"/>
+                <constraint firstItem="oQ2-ES-FaV" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="j4M-Bh-kJU"/>
+                <constraint firstAttribute="trailing" secondItem="oQ2-ES-FaV" secondAttribute="trailing" id="vGW-gh-gCX"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_15x15.png" width="15" height="15"/>
+    </resources>
+</document>
