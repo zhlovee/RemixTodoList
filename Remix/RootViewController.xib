@@ -22,23 +22,20 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2f-WX-Bd7" customClass="XSegmentedButton">
-                            <rect key="frame" x="0.0" y="44" width="60" height="200"/>
+                            <rect key="frame" x="0.0" y="44" width="60" height="240"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" tag="123" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-Sy-RaS">
-                                    <rect key="frame" x="0.0" y="10" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.90328467153284675" green="0.90328467153284675" blue="0.90328467153284675" alpha="1" colorSpace="deviceRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="grid_30x30.png">
                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="showTodoView:" destination="-1" eventType="touchUpInside" id="vvy-MY-AN5"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="456" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-kk-JON">
-                                    <rect key="frame" x="0.0" y="70" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="60" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="calendar_30x30.png">
@@ -48,38 +45,50 @@
                                     <state key="selected">
                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
-                                    <connections>
-                                        <action selector="showHomeView:" destination="-1" eventType="touchUpInside" id="upZ-id-dLF"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="789" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q60-HR-x0a">
-                                    <rect key="frame" x="0.0" y="130" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="120" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="list2_30x30.png">
                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <connections>
-                                        <action selector="showSettingView:" destination="-1" eventType="touchUpInside" id="I7p-J8-9Wn"/>
-                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="888" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-BX-nfb">
+                                    <rect key="frame" x="0.0" y="180" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" image="setting_full_30x30.png">
+                                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="C5T-Sy-RaS" firstAttribute="height" secondItem="q60-HR-x0a" secondAttribute="height" id="37j-dX-fkA"/>
+                                <constraint firstItem="qk2-BX-nfb" firstAttribute="leading" secondItem="A2f-WX-Bd7" secondAttribute="leading" id="14w-fb-3ij"/>
+                                <constraint firstItem="qk2-BX-nfb" firstAttribute="height" secondItem="kc0-kk-JON" secondAttribute="height" id="4Nn-vU-fB2"/>
                                 <constraint firstAttribute="trailing" secondItem="q60-HR-x0a" secondAttribute="trailing" id="4Oe-qr-HoH"/>
-                                <constraint firstItem="kc0-kk-JON" firstAttribute="top" secondItem="C5T-Sy-RaS" secondAttribute="bottom" id="BRK-rV-dxR"/>
+                                <constraint firstItem="qk2-BX-nfb" firstAttribute="height" secondItem="q60-HR-x0a" secondAttribute="height" id="6VX-fj-7pS"/>
+                                <constraint firstItem="kc0-kk-JON" firstAttribute="top" secondItem="C5T-Sy-RaS" secondAttribute="bottom" id="7Pj-Bw-UUe"/>
                                 <constraint firstItem="kc0-kk-JON" firstAttribute="leading" secondItem="A2f-WX-Bd7" secondAttribute="leading" id="DbN-6l-DZz"/>
                                 <constraint firstItem="C5T-Sy-RaS" firstAttribute="leading" secondItem="A2f-WX-Bd7" secondAttribute="leading" id="EiI-xt-OoH"/>
+                                <constraint firstItem="qk2-BX-nfb" firstAttribute="top" secondItem="q60-HR-x0a" secondAttribute="bottom" id="Fn1-0Z-q9n"/>
                                 <constraint firstItem="q60-HR-x0a" firstAttribute="leading" secondItem="A2f-WX-Bd7" secondAttribute="leading" id="G5d-3E-x0s"/>
+                                <constraint firstAttribute="trailing" secondItem="qk2-BX-nfb" secondAttribute="trailing" id="J77-Os-AAm"/>
                                 <constraint firstAttribute="trailing" secondItem="C5T-Sy-RaS" secondAttribute="trailing" id="WX3-MS-fQp"/>
-                                <constraint firstItem="C5T-Sy-RaS" firstAttribute="height" secondItem="kc0-kk-JON" secondAttribute="height" id="Wfk-2O-YNS"/>
+                                <constraint firstItem="qk2-BX-nfb" firstAttribute="height" secondItem="C5T-Sy-RaS" secondAttribute="height" id="Xxl-Zk-PES"/>
                                 <constraint firstAttribute="trailing" secondItem="kc0-kk-JON" secondAttribute="trailing" id="c8f-u9-Nie"/>
-                                <constraint firstAttribute="height" constant="200" id="jB4-Tv-X2y"/>
-                                <constraint firstAttribute="bottom" secondItem="q60-HR-x0a" secondAttribute="bottom" constant="10" id="oL1-xQ-lmz"/>
-                                <constraint firstItem="C5T-Sy-RaS" firstAttribute="top" secondItem="A2f-WX-Bd7" secondAttribute="top" constant="10" id="sgq-xR-aFR"/>
+                                <constraint firstItem="q60-HR-x0a" firstAttribute="top" secondItem="kc0-kk-JON" secondAttribute="bottom" id="cCt-Rq-EtQ"/>
+                                <constraint firstItem="C5T-Sy-RaS" firstAttribute="top" secondItem="A2f-WX-Bd7" secondAttribute="top" id="hKL-OP-jV8"/>
+                                <constraint firstAttribute="height" constant="240" id="jB4-Tv-X2y"/>
+                                <constraint firstItem="C5T-Sy-RaS" firstAttribute="top" secondItem="A2f-WX-Bd7" secondAttribute="top" id="sgq-xR-aFR"/>
                                 <constraint firstItem="q60-HR-x0a" firstAttribute="top" secondItem="kc0-kk-JON" secondAttribute="bottom" id="u96-QW-asY"/>
+                                <constraint firstAttribute="bottom" secondItem="qk2-BX-nfb" secondAttribute="bottom" id="w7i-dN-A5O"/>
                             </constraints>
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
@@ -115,5 +124,6 @@
         <image name="calendar_30x30.png" width="30" height="31"/>
         <image name="grid_30x30.png" width="30" height="30"/>
         <image name="list2_30x30.png" width="32" height="34"/>
+        <image name="setting_full_30x30.png" width="30" height="30"/>
     </resources>
 </document>
