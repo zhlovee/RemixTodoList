@@ -168,6 +168,11 @@ static RootViewController* instance;
         }];
     }
 }
+- (IBAction)closeLeftNavi:(id)sender {
+    if (isLeftOpened) {
+        [self toggleLeftNavigationBar];
+    }
+}
 
 -(void)setDefaultConstraints
 {
