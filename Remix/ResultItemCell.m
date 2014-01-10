@@ -38,5 +38,11 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)cellDidDeleteItem:(id)sender {
+    // Delete the managed object at the given index path.
+    if (self.delegate && [self.delegate respondsToSelector:@selector(resultItemCellDidRadioBtnPressed:)]) {
+        [self.delegate resultItemCellDidRadioBtnPressed:self];
+    }
+}
 
 @end

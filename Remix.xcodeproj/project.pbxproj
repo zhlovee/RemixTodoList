@@ -67,6 +67,13 @@
 		99A5CCEA1863E645000B09F6 /* todoList.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 99A5CCE91863E645000B09F6 /* todoList.jpeg */; };
 		99A5CCF2186401D0000B09F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A5CCF1186401D0000B09F6 /* Images.xcassets */; };
 		99ACAA8C187A935F003D3B14 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 99ACAA8B187A935F003D3B14 /* README.md */; };
+		99ACAA92187AA349003D3B14 /* setting_full_30x30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99ACAA91187AA349003D3B14 /* setting_full_30x30@2x.png */; };
+		99ACAAAA187AAF83003D3B14 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAAA8187AAF83003D3B14 /* ConfigViewController.m */; };
+		99ACAAAB187AAF83003D3B14 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99ACAAA9187AAF83003D3B14 /* ConfigViewController.xib */; };
+		99ACAC39187D5231003D3B14 /* trash_30x30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99ACAC38187D5231003D3B14 /* trash_30x30@2x.png */; };
+		99ACAC3C187E3F7C003D3B14 /* XConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAC3B187E3F7C003D3B14 /* XConfirmView.m */; };
+		99ACAC3E187E406C003D3B14 /* XConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99ACAC3D187E406C003D3B14 /* XConfirmView.xib */; };
+		99ACAC41187E4674003D3B14 /* XAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAC40187E4674003D3B14 /* XAlertView.m */; };
 		99D24CAD187692F3005D431E /* ResultItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D24CAC187692F3005D431E /* ResultItemCell.m */; };
 		99D24CAF18769308005D431E /* ResultItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D24CAE18769308005D431E /* ResultItemCell.xib */; };
 		99D24CB818769403005D431E /* bell4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D24CB318769403005D431E /* bell4.png */; };
@@ -187,6 +194,16 @@
 		99A5CCE91863E645000B09F6 /* todoList.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = todoList.jpeg; sourceTree = "<group>"; };
 		99A5CCF1186401D0000B09F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		99ACAA8B187A935F003D3B14 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		99ACAA91187AA349003D3B14 /* setting_full_30x30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting_full_30x30@2x.png"; path = "../setting_full_30x30@2x.png"; sourceTree = "<group>"; };
+		99ACAAA7187AAF83003D3B14 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		99ACAAA8187AAF83003D3B14 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		99ACAAA9187AAF83003D3B14 /* ConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
+		99ACAC38187D5231003D3B14 /* trash_30x30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trash_30x30@2x.png"; sourceTree = "<group>"; };
+		99ACAC3A187E3F7C003D3B14 /* XConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XConfirmView.h; sourceTree = "<group>"; };
+		99ACAC3B187E3F7C003D3B14 /* XConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XConfirmView.m; sourceTree = "<group>"; };
+		99ACAC3D187E406C003D3B14 /* XConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XConfirmView.xib; sourceTree = "<group>"; };
+		99ACAC3F187E4674003D3B14 /* XAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAlertView.h; sourceTree = "<group>"; };
+		99ACAC40187E4674003D3B14 /* XAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAlertView.m; sourceTree = "<group>"; };
 		99D24CAB187692F3005D431E /* ResultItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultItemCell.h; sourceTree = "<group>"; };
 		99D24CAC187692F3005D431E /* ResultItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultItemCell.m; sourceTree = "<group>"; };
 		99D24CAE18769308005D431E /* ResultItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultItemCell.xib; sourceTree = "<group>"; };
@@ -374,9 +391,12 @@
 				998E12B9184F19EB00E95558 /* RootViewController.h */,
 				998E12BA184F19EB00E95558 /* RootViewController.m */,
 				99E908081868263300DC6BDE /* RootViewController.xib */,
-				99D24CAA1876928E005D431E /* chengjiu */,
+				99D24CAA1876928E005D431E /* result */,
 				992E8B84186EB85400F382F5 /* plan */,
 				998E12E5184F1CD700E95558 /* todo */,
+				99ACAAA7187AAF83003D3B14 /* ConfigViewController.h */,
+				99ACAAA8187AAF83003D3B14 /* ConfigViewController.m */,
+				99ACAAA9187AAF83003D3B14 /* ConfigViewController.xib */,
 			);
 			name = "view controller";
 			sourceTree = "<group>";
@@ -397,6 +417,8 @@
 		998E12B0184F174500E95558 /* notepad */ = {
 			isa = PBXGroup;
 			children = (
+				99ACAC3F187E4674003D3B14 /* XAlertView.h */,
+				99ACAC40187E4674003D3B14 /* XAlertView.m */,
 				998E135F18500BD600E95558 /* XCommonView.h */,
 				998E136018500BD600E95558 /* XCommonView.m */,
 				9992BBAB1859BBA700EF71C4 /* XBaseViewController.h */,
@@ -405,6 +427,9 @@
 				9970B2321861A58400BA695D /* XCommonViewCell.m */,
 				99E90812186934B400DC6BDE /* XSegmentedButton.h */,
 				99E90813186934B500DC6BDE /* XSegmentedButton.m */,
+				99ACAC3A187E3F7C003D3B14 /* XConfirmView.h */,
+				99ACAC3B187E3F7C003D3B14 /* XConfirmView.m */,
+				99ACAC3D187E406C003D3B14 /* XConfirmView.xib */,
 			);
 			name = notepad;
 			sourceTree = "<group>";
@@ -473,6 +498,8 @@
 		998E12F8184F378B00E95558 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				99ACAC38187D5231003D3B14 /* trash_30x30@2x.png */,
+				99ACAA91187AA349003D3B14 /* setting_full_30x30@2x.png */,
 				99D24CE61877FD8C005D431E /* clock_30x30@2x.png */,
 				99D24CE41877FA9A005D431E /* calendar_30x30.png */,
 				99D24CE21877F9FC005D431E /* grid_30x30.png */,
@@ -489,7 +516,7 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
-		99D24CAA1876928E005D431E /* chengjiu */ = {
+		99D24CAA1876928E005D431E /* result */ = {
 			isa = PBXGroup;
 			children = (
 				998E12E0184F1CAC00E95558 /* ResultViewController.h */,
@@ -499,7 +526,7 @@
 				99D24CAC187692F3005D431E /* ResultItemCell.m */,
 				99D24CAE18769308005D431E /* ResultItemCell.xib */,
 			);
-			name = chengjiu;
+			name = result;
 			sourceTree = "<group>";
 		};
 		99EC6F121862A06D0010A4BC /* autogen */ = {
@@ -589,6 +616,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99D24CBF187696C2005D431E /* red_flag.png in Resources */,
+				99ACAA92187AA349003D3B14 /* setting_full_30x30@2x.png in Resources */,
+				99ACAC3E187E406C003D3B14 /* XConfirmView.xib in Resources */,
+				99ACAC39187D5231003D3B14 /* trash_30x30@2x.png in Resources */,
 				992E8B8D186FF60A00F382F5 /* PlanItemCell.xib in Resources */,
 				99D24CE11877F930005D431E /* list2_30x30.png in Resources */,
 				99A5CCF2186401D0000B09F6 /* Images.xcassets in Resources */,
@@ -603,6 +633,7 @@
 				998E12EA184F1CEE00E95558 /* TodoViewController.xib in Resources */,
 				99A5CCEA1863E645000B09F6 /* todoList.jpeg in Resources */,
 				992E8B20186A86E900F382F5 /* flag_30x30@2x.png in Resources */,
+				99ACAAAB187AAF83003D3B14 /* ConfigViewController.xib in Resources */,
 				992E8B17186A78E100F382F5 /* check_30x30@2x.png in Resources */,
 				99E908091868263300DC6BDE /* RootViewController.xib in Resources */,
 				99D24CE51877FA9B005D431E /* calendar_30x30.png in Resources */,
@@ -633,6 +664,7 @@
 				998E12CB184F1A6F00E95558 /* UIView+Util.m in Sources */,
 				992E8B65186ADCAE00F382F5 /* UIView+convenience.m in Sources */,
 				992E8B8B186FF5F100F382F5 /* PlanItemCell.m in Sources */,
+				99ACAC41187E4674003D3B14 /* XAlertView.m in Sources */,
 				992E8B88186ECF0300F382F5 /* ALDClock.m in Sources */,
 				998E12D4184F1B5700E95558 /* IIViewDeckController.m in Sources */,
 				992E8B83186E80B500F382F5 /* TodoItem+Util.m in Sources */,
@@ -659,6 +691,7 @@
 				992E8B66186ADCAE00F382F5 /* VRGCalendarView.m in Sources */,
 				998E12BC184F19EB00E95558 /* RootViewController.m in Sources */,
 				99D24CAD187692F3005D431E /* ResultItemCell.m in Sources */,
+				99ACAC3C187E3F7C003D3B14 /* XConfirmView.m in Sources */,
 				992E8B62186ADCAE00F382F5 /* NSDate+convenience.m in Sources */,
 				998E12C8184F1A6F00E95558 /* XLogger.m in Sources */,
 				992E8B80186E7FD300F382F5 /* TodoItem.m in Sources */,
@@ -666,6 +699,7 @@
 				998E1284184F168600E95558 /* main.m in Sources */,
 				998E12CA184F1A6F00E95558 /* UIView+HandlePosition.m in Sources */,
 				998E12D9184F1C7D00E95558 /* PreviewViewController.m in Sources */,
+				99ACAAAA187AAF83003D3B14 /* ConfigViewController.m in Sources */,
 				9970B215185FE35700BA695D /* TodoViewCellController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,9 +11,10 @@
 #import "RNBlurModalView.h"
 #import "XSegmentedButton.h"
 #import "ResultItemCell.h"
+#import "XAlertView.h"
 #import "Gobal.h"
 
-@interface ResultViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ResultViewController ()<UITableViewDelegate,UITableViewDataSource,ResultItemCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *unFinishedViewBtn;
@@ -21,9 +22,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *arrowConstraint;
 @property (weak, nonatomic) IBOutlet XSegmentedButton *topPanel;
 
-@property(nonatomic,strong) NSArray *items;
-@property(nonatomic,strong) NSArray *finishedItems;
-@property(nonatomic,strong) NSArray *unfinishedItems;
+@property(nonatomic,strong) NSMutableArray *items;
+@property(nonatomic,strong) NSMutableArray *finishedItems;
+@property(nonatomic,strong) NSMutableArray *unfinishedItems;
 @end
 
 @implementation ResultViewController
@@ -54,6 +55,14 @@
     self.finishedItems = [self fetchItems:YES];
     self.unfinishedItems = [self fetchItems:NO];
     
+    [self updateItemText];
+    
+    self.items = self.finishedItems;
+    [self.tableView reloadData];
+}
+
+-(void)updateItemText
+{
     NSString *text = [NSString stringWithFormat:@"%d个任务已完成",self.finishedItems.count];
     NSRange range = [text rangeOfString:[NSString stringWithFormat:@"%d",self.finishedItems.count]];
     NSMutableAttributedString* attrStr = [[NSMutableAttributedString alloc] initWithString:text];
@@ -71,12 +80,9 @@
         [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
     }
     [self.unFinishedViewBtn setAttributedTitle:attrStr forState:UIControlStateNormal];
-    
-    self.items = self.finishedItems;
-    [self.tableView reloadData];
 }
 
--(NSArray*)fetchItems:(BOOL)finished
+-(NSMutableArray*)fetchItems:(BOOL)finished
 {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"TodoItem" inManagedObjectContext:APP_DELEGATE.managedObjectContext];
@@ -104,7 +110,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"ResultItemCell" owner:self options:nil] objectAtIndex:0];
     }
     cell.item = item;
-    
+    cell.delegate = self;
     return cell;
 }
 
@@ -148,5 +154,31 @@
 - (IBAction)fdsbfc:(id)sender {
     [ROOT_VC toggleLeftNavigationBar];
 }
+
+-(void)resultItemCellDidRadioBtnPressed:(ResultItemCell *)cell
+{
+    [XAlertView showConfirm:@"确认" subTitle:@"确定要删除这条事项吗？" okBtnText:@"OK" cancelBtnText:@"Cancel" completion:^(NSUInteger buttonIndex) {
+        if (buttonIndex) {
+            [APP_DELEGATE.managedObjectContext deleteObject:cell.item];
+            // Commit the change.
+            NSError *error = nil;
+            if (![APP_DELEGATE.managedObjectContext save:&error]) {
+                // Handle the error.
+                [LOGGER trace:error];
+            }else{
+                if (self.topPanel.currentSelectedIndex) {
+                    self.unfinishedItems = [self fetchItems:NO];
+                    self.items = self.unfinishedItems;
+                }else{
+                    self.finishedItems = [self fetchItems:YES];
+                    self.items = self.finishedItems;
+                }
+                [self updateItemText];
+                [self.tableView reloadData];
+            }
+        }
+    }];
+}
+
 
 @end

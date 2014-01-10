@@ -106,25 +106,4 @@
 {
     return _items.count;
 }
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the managed object at the given index path.
-        NSManagedObject *itemToDelete = [self.items objectAtIndex:indexPath.row];
-        [APP_DELEGATE.managedObjectContext deleteObject:itemToDelete];
-
-        // Update the array and table view.
-        [self.items removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-
-        // Commit the change.
-        NSError *error = nil;
-        if (![APP_DELEGATE.managedObjectContext save:&error]) {
-            // Handle the error.
-            [LOGGER trace:error];
-        }
-    }
-}
-
 @end
