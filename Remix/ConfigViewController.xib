@@ -29,6 +29,11 @@
                                             <action selector="toggleLeftNavi:" destination="-1" id="vQ7-yM-xfz"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" image="heart_30x30.png" id="Fly-vD-y0Y">
+                                        <connections>
+                                            <action selector="nice:" destination="-1" id="6ks-fo-uem"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -139,4 +144,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="heart_30x30.png" width="30" height="30"/>
+    </resources>
 </document>

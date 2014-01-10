@@ -72,6 +72,11 @@
         }
     }];
 }
+- (IBAction)nice:(id)sender {
+    [XAlertView showConfirm:@"好人有好报" subTitle:@"亲，去apple store 打个分吧~" okBtnText:@"OK" cancelBtnText:@"好的" completion:^(NSUInteger buttonIndex) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:APP_STORE_URL]];
+    }];
+}
 - (IBAction)suggestionFeedBack:(id)sender {
     RNBlurModalView *blur = [[RNBlurModalView alloc] initWithTitle:@"意见反馈" message:@"如有意见或者建议请发送至邮箱zhlovee@gmail.com,感谢支持！！！"];
     [blur show];

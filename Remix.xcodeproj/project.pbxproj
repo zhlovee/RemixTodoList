@@ -74,6 +74,7 @@
 		99ACAC3C187E3F7C003D3B14 /* XConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAC3B187E3F7C003D3B14 /* XConfirmView.m */; };
 		99ACAC3E187E406C003D3B14 /* XConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99ACAC3D187E406C003D3B14 /* XConfirmView.xib */; };
 		99ACAC41187E4674003D3B14 /* XAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAC40187E4674003D3B14 /* XAlertView.m */; };
+		99C39714187FFD4B004342DB /* heart_30x30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C39713187FFD4B004342DB /* heart_30x30@2x.png */; };
 		99D24CAD187692F3005D431E /* ResultItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D24CAC187692F3005D431E /* ResultItemCell.m */; };
 		99D24CAF18769308005D431E /* ResultItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D24CAE18769308005D431E /* ResultItemCell.xib */; };
 		99D24CB818769403005D431E /* bell4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D24CB318769403005D431E /* bell4.png */; };
@@ -204,6 +205,7 @@
 		99ACAC3D187E406C003D3B14 /* XConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XConfirmView.xib; sourceTree = "<group>"; };
 		99ACAC3F187E4674003D3B14 /* XAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAlertView.h; sourceTree = "<group>"; };
 		99ACAC40187E4674003D3B14 /* XAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAlertView.m; sourceTree = "<group>"; };
+		99C39713187FFD4B004342DB /* heart_30x30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart_30x30@2x.png"; sourceTree = "<group>"; };
 		99D24CAB187692F3005D431E /* ResultItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultItemCell.h; sourceTree = "<group>"; };
 		99D24CAC187692F3005D431E /* ResultItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultItemCell.m; sourceTree = "<group>"; };
 		99D24CAE18769308005D431E /* ResultItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultItemCell.xib; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 		998E12F8184F378B00E95558 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				99C39713187FFD4B004342DB /* heart_30x30@2x.png */,
 				99ACAC38187D5231003D3B14 /* trash_30x30@2x.png */,
 				99ACAA91187AA349003D3B14 /* setting_full_30x30@2x.png */,
 				99D24CE61877FD8C005D431E /* clock_30x30@2x.png */,
@@ -587,6 +590,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Schiffer Li";
 				TargetAttributes = {
+					998E1273184F168600E95558 = {
+						DevelopmentTeam = 7XN54D5B43;
+					};
 					998E128E184F168600E95558 = {
 						TestTargetID = 998E1273184F168600E95558;
 					};
@@ -627,6 +633,7 @@
 				99ACAA8C187A935F003D3B14 /* README.md in Resources */,
 				998E12E4184F1CAC00E95558 /* ResultViewController.xib in Resources */,
 				9970B22D18613E2E00BA695D /* TodoItemCell.xib in Resources */,
+				99C39714187FFD4B004342DB /* heart_30x30@2x.png in Resources */,
 				99D24CE71877FD8C005D431E /* clock_30x30@2x.png in Resources */,
 				9970B216185FE35700BA695D /* TodoViewCellController.xib in Resources */,
 				992E8B14186A6A6100F382F5 /* list_30x30@2x.png in Resources */,
@@ -820,6 +827,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Remix/Remix-Prefix.pch";
 				INFOPLIST_FILE = "Remix/Remix-Info.plist";
@@ -836,13 +844,14 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Remix/Remix-Prefix.pch";
 				INFOPLIST_FILE = "Remix/Remix-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C864B003-D558-4537-85F8-179C4198B5AA";
+				PROVISIONING_PROFILE = "14F5343C-E794-48D5-A99B-38926045EB67";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

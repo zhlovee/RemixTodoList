@@ -15,6 +15,9 @@
 #import "NaviController.h"
 #import "AppDelegate.h"
 
+//#define APP_STORE_URL @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=786937916"
+#define APP_STORE_URL @"https://itunes.apple.com/cn/app/todo-list/id786937916?mt=8"
+
 #define APP_DELEGATE [AppDelegate sharedAppDelegate]
 
 #ifndef Episode_Gobal_h
