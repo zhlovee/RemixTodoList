@@ -106,7 +106,7 @@
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.50330748175182483" green="0.50330748175182483" blue="0.50330748175182483" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="0.49777600364963503" green="0.49777600364963503" blue="0.49777600364963503" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="A2f-WX-Bd7" secondAttribute="trailing" id="9zx-8v-nTb"/>
                         <constraint firstItem="A2f-WX-Bd7" firstAttribute="top" secondItem="os8-bc-2Xa" secondAttribute="top" constant="44" id="TDI-cU-VTd"/>
