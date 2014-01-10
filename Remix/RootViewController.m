@@ -49,15 +49,17 @@ static RootViewController* instance;
 - (IBAction)doLeftNaviSwiped:(UIPanGestureRecognizer*)grz {
     CGFloat offestX = [grz translationInView:self.view].x;
     [grz setTranslation:CGPointZero inView:self.view];
-    [LOGGER traceFloat:offestX];
+//    [LOGGER traceFloat:offestX];
     static BOOL doSwipe = NO;
     switch (grz.state) {
         case UIGestureRecognizerStateBegan:{
             if (isLeftOpened && offestX<0) {
+                //allow swipe right to close left navi
                 doSwipe = YES;
                 self.leftCwidth.constant += offestX;
                 [self.view layoutIfNeeded];
             }else if (!isLeftOpened && offestX>0){
+                //allow swipe left to open left navi
                 doSwipe = YES;
                 self.leftCwidth.constant += offestX;
                 [self.view layoutIfNeeded];

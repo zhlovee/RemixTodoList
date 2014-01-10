@@ -17,6 +17,18 @@
 
 @implementation XSegmentedButton
 
+-(NSUInteger)currentSelectedIndex
+{
+    __block NSUInteger i = 0;
+    [self.subviews enumerateObjectsUsingBlock:^(UIButton* obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[UIButton class]]) {
+            if (obj.selected) {
+                i = idx;
+            }
+        }
+    }];
+    return i;
+}
 -(void)awakeFromNib
 {
     [super awakeFromNib];

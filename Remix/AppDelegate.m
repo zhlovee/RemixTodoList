@@ -27,11 +27,16 @@
     self.window.rootViewController = [[NaviController alloc] initWithRootViewController:root identifiedBy:nil];
 
     [self resetLocalNotification];
-    //clear data!!!
-//    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TodoItems.sqlite"];
-//    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
-    
+
+//    [self clearAllData];
     return YES;
+}
+
+-(void)clearAllData
+{
+    //clear data!!!
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TodoItems.sqlite"];
+    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification*)notification{

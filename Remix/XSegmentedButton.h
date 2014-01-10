@@ -10,6 +10,7 @@
 #define XSEG_DEFAULT_SELECTED_BUTTON_TAG 123
 @interface XSegmentedButton : UIView
 
+-(NSUInteger)currentSelectedIndex;
 -(void)selectWithTag:(NSUInteger)tag;
 -(void)selectWithTag:(NSUInteger)tag normalBackgroundColor:(UIColor*)color selectedBackGroundColor:(UIColor*)color2;
 
