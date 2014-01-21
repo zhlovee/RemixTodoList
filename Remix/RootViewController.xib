@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
             <connections>
                 <outlet property="bodyView" destination="WAU-t3-rEm" id="hXO-DT-3kc"/>
-                <outlet property="leftCwidth" destination="pLG-AM-zxg" id="C8U-7o-6Pb"/>
+                <outlet property="leftCwidth" destination="qft-62-sUb" id="ErF-ZY-bgf"/>
                 <outlet property="leftNaviBar" destination="os8-bc-2Xa" id="bYX-QA-Zos"/>
                 <outlet property="leftNaviItems" destination="A2f-WX-Bd7" id="BwG-IE-0EK"/>
                 <outlet property="view" destination="dp9-kT-g8G" id="bDr-lJ-bnZ"/>
@@ -19,15 +19,15 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="os8-bc-2Xa">
-                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2f-WX-Bd7" customClass="XSegmentedButton">
-                            <rect key="frame" x="0.0" y="44" width="0.0" height="240"/>
+                            <rect key="frame" x="0.0" y="44" width="60" height="240"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" tag="123" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-Sy-RaS">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.90328467153284675" green="0.90328467153284675" blue="0.90328467153284675" alpha="1" colorSpace="deviceRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -39,7 +39,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="456" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-kk-JON">
-                                    <rect key="frame" x="0.0" y="60" width="0.0" height="60"/>
+                                    <rect key="frame" x="0.0" y="60" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="calendar_30x30.png">
@@ -54,7 +54,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="789" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q60-HR-x0a">
-                                    <rect key="frame" x="0.0" y="120" width="0.0" height="60"/>
+                                    <rect key="frame" x="0.0" y="120" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="list2_30x30.png">
@@ -66,7 +66,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="888" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-BX-nfb">
-                                    <rect key="frame" x="0.0" y="180" width="0.0" height="60"/>
+                                    <rect key="frame" x="0.0" y="180" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="setting_full_30x30.png">
@@ -106,12 +106,12 @@
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.49777600364963503" green="0.49777600364963503" blue="0.49777600364963503" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="0.67069584131240845" green="0.85009235143661499" blue="0.99928891658782959" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="A2f-WX-Bd7" secondAttribute="trailing" id="9zx-8v-nTb"/>
                         <constraint firstItem="A2f-WX-Bd7" firstAttribute="top" secondItem="os8-bc-2Xa" secondAttribute="top" constant="44" id="TDI-cU-VTd"/>
                         <constraint firstItem="A2f-WX-Bd7" firstAttribute="leading" secondItem="os8-bc-2Xa" secondAttribute="leading" id="dvx-Ln-apr"/>
-                        <constraint firstAttribute="width" id="pLG-AM-zxg"/>
+                        <constraint firstAttribute="width" constant="60" id="pLG-AM-zxg"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAU-t3-rEm">
@@ -130,8 +130,8 @@
                 <constraint firstAttribute="bottom" secondItem="WAU-t3-rEm" secondAttribute="bottom" id="CLd-fA-nHk"/>
                 <constraint firstAttribute="trailing" secondItem="WAU-t3-rEm" secondAttribute="trailing" priority="1" placeholder="YES" id="TP5-7o-U6A"/>
                 <constraint firstItem="os8-bc-2Xa" firstAttribute="top" secondItem="dp9-kT-g8G" secondAttribute="top" id="aQ0-VK-24h"/>
-                <constraint firstItem="WAU-t3-rEm" firstAttribute="leading" secondItem="os8-bc-2Xa" secondAttribute="trailing" id="i2A-3i-6Fa"/>
                 <constraint firstAttribute="bottom" secondItem="os8-bc-2Xa" secondAttribute="bottom" id="l78-ZM-wnc"/>
+                <constraint firstItem="WAU-t3-rEm" firstAttribute="leading" secondItem="dp9-kT-g8G" secondAttribute="leading" id="qft-62-sUb"/>
                 <constraint firstItem="os8-bc-2Xa" firstAttribute="leading" secondItem="dp9-kT-g8G" secondAttribute="leading" id="tDH-4j-aYS"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

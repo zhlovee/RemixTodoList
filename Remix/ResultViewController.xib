@@ -34,6 +34,7 @@
                                             <action selector="fdsbfc:" destination="-1" id="bmg-Pe-Qr3"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="F8L-Xh-XIX"/>
                                 </navigationItem>
                             </items>
                         </navigationBar>

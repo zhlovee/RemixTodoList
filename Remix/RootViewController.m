@@ -91,7 +91,8 @@ static RootViewController* instance;
                 self.leftCwidth.constant = 0;
                 isLeftOpened = NO;
             }
-            [self.view layoutIfNeeded];
+            [self.view layoutIfNeededWithDuriation:.3];
+//            [self.view layoutIfNeeded];
             
 //            NSLog(@"3");
             break;
@@ -109,7 +110,7 @@ static RootViewController* instance;
     self.bodyView.layer.shadowColor = [[UIColor blackColor] CGColor];
     [self.bodyView.layer setShadowOffset:CGSizeMake(0, 1)];
     [self.bodyView.layer setShadowOpacity:1.0];
-    [self.bodyView.layer setShadowRadius:2.0];
+    [self.bodyView.layer setShadowRadius:1.0];
 
     [self setDefaultConstraints];
     [self initLeftNaviControllers];
