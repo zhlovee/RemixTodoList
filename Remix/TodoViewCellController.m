@@ -40,7 +40,7 @@
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     [request setSortDescriptors:sortDescriptors];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(important == %d) AND (urgency == %d)",self.important,self.urgency];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(finished == %d) AND (important == %d) AND (urgency == %d)", 0,self.important,self.urgency];
     [request setPredicate:predicate];
 
     NSError *error = nil;
