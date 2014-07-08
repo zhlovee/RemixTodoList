@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
@@ -105,6 +105,16 @@
                             </constraints>
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eN-Zw-wTo">
+                            <rect key="frame" x="-9" y="493" width="79" height="66"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="clock_30x30.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="doPresentClockVC:" destination="-1" eventType="touchUpInside" id="jhm-1D-mg1"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.67069584131240845" green="0.85009235143661499" blue="0.99928891658782959" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -115,7 +125,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAU-t3-rEm">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="60" y="0.0" width="260" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
@@ -131,7 +141,7 @@
                 <constraint firstAttribute="trailing" secondItem="WAU-t3-rEm" secondAttribute="trailing" priority="1" placeholder="YES" id="TP5-7o-U6A"/>
                 <constraint firstItem="os8-bc-2Xa" firstAttribute="top" secondItem="dp9-kT-g8G" secondAttribute="top" id="aQ0-VK-24h"/>
                 <constraint firstAttribute="bottom" secondItem="os8-bc-2Xa" secondAttribute="bottom" id="l78-ZM-wnc"/>
-                <constraint firstItem="WAU-t3-rEm" firstAttribute="leading" secondItem="dp9-kT-g8G" secondAttribute="leading" id="qft-62-sUb"/>
+                <constraint firstItem="WAU-t3-rEm" firstAttribute="leading" secondItem="dp9-kT-g8G" secondAttribute="leading" constant="60" id="qft-62-sUb"/>
                 <constraint firstItem="os8-bc-2Xa" firstAttribute="leading" secondItem="dp9-kT-g8G" secondAttribute="leading" id="tDH-4j-aYS"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -144,6 +154,7 @@
     </objects>
     <resources>
         <image name="calendar_30x30.png" width="30" height="31"/>
+        <image name="clock_30x30.png" width="24" height="25"/>
         <image name="grid_30x30.png" width="30" height="30"/>
         <image name="list2_30x30.png" width="32" height="34"/>
         <image name="setting_full_30x30.png" width="30" height="30"/>

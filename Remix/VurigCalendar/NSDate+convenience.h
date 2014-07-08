@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (Convenience)
+-(NSString*)descriptionFromNow;
 
 -(NSDate *)offsetMonth:(int)numMonths;
 -(NSDate *)offsetDay:(int)numDays;

@@ -8,6 +8,8 @@
 #import "Gobal.h"
 #import <QuartzCore/QuartzCore.h>
 #import "UIView+Util.h"
+#import <objc/runtime.h>
+
 
 
 @implementation UIView (Util)
@@ -186,4 +188,41 @@
     self.bounds = r;
 }
 
+@end
+
+
+@implementation UIAlertView (Util)
+-(id)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
+{
+    return [self initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles,nil];
+}
+-(void)setCallBack:(SmartAlertCallback)callBack
+{
+    objc_setAssociatedObject(self, @selector(callBack), callBack, OBJC_ASSOCIATION_COPY);
+}
+-(SmartAlertCallback)callBack
+{
+    return objc_getAssociatedObject(self, @selector(callBack));
+}
+-(void)showWithCompletion:(SmartAlertCallback)completeBlock
+{
+    if (completeBlock) {
+        self.callBack = completeBlock;
+    }
+    self.delegate = self;
+    [self show];
+}
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (self.callBack) {
+        self.callBack(buttonIndex);
+        //released resources when the call back invoked
+        self.callBack = nil;
+    }
+}
++(void)showAlertWithTitle:(NSString *)title message:(NSString *)message
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
 @end

@@ -33,3 +33,16 @@
 
 -(void)placeAt:(UIView*)view;
 @end
+
+
+typedef void (^SmartAlertCallback) (NSUInteger buttonIndex);
+
+@interface UIAlertView (Util)
+
+- (id)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
+//不需要delegate回调的清况. 只有个OKbutton的Alert
++(void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+//不用delegate,采用回调
+-(void)showWithCompletion:(SmartAlertCallback)completeBlock;
+
+@end

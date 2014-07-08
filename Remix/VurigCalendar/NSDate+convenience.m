@@ -9,6 +9,41 @@
 
 @implementation NSDate (Convenience)
 
+
+-(NSString *)descriptionFromNow
+{
+    if ([self timeIntervalSinceNow]>0) {
+        NSDateComponents *dc = [self dateComponentFromEndDate];
+        return [self descriptionForDateComponent:dc];
+    }else{
+        return nil;
+    }
+}
+
+-(NSDateComponents *)dateComponentFromEndDate
+{
+    NSCalendar *cld = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    return [cld components:unitFlags fromDate:[NSDate date] toDate:self options:0];
+}
+
+-(NSString*)descriptionForDateComponent:(NSDateComponents*)dc
+{
+    if (dc.year>0) {
+        return [NSString stringWithFormat:@"%d年%d月%d天",dc.year,dc.month,dc.day];
+    }else if (dc.month>0){
+        return [NSString stringWithFormat:@"%d月%d天",dc.month,dc.day];
+    }else if (dc.day>0){
+        return [NSString stringWithFormat:@"%d天%02.0f小时",dc.day,(float)dc.hour];
+    }else if (dc.hour>0){
+        return [NSString stringWithFormat:@"%2.0f小时%02.0f分",(float)dc.hour,(float)dc.minute];
+    }else{
+        return [NSString stringWithFormat:@"%2.0f分%02.0f秒",(float)dc.minute,(float)dc.second];
+    }
+}
+
+
+
 -(int)year {
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];

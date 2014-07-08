@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClockViewController">
+            <connections>
+                <outlet property="bodyView" destination="MEz-i2-6LH" id="UYn-xV-kfa"/>
+                <outlet property="cfSwitch" destination="S1n-Er-Hq3" id="xXf-cN-G4x"/>
+                <outlet property="clockView" destination="pLB-NL-6P8" id="mZi-7T-GvM"/>
+                <outlet property="descLabel" destination="RD8-Xi-gd8" id="WSP-yn-U1m"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEz-i2-6LH" userLabel="body">
+                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCr-SB-Vzc">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="闹钟" id="9kS-ed-yB1">
+                                    <barButtonItem key="leftBarButtonItem" title="返回" style="plain" id="jet-cP-nIz">
+                                        <connections>
+                                            <action selector="doNaviBack:" destination="-1" id="VQa-Jo-vGK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="保存" id="1JJ-jM-piI">
+                                        <connections>
+                                            <action selector="saveCurrentSetting:" destination="-1" id="3T8-rq-t0G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLB-NL-6P8" userLabel="clockContainer">
+                            <rect key="frame" x="20" y="64" width="280" height="280"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="280" id="0hy-3r-1Dc"/>
+                                <constraint firstAttribute="height" constant="280" id="7sl-tm-W3v"/>
+                            </constraints>
+                        </view>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-Er-Hq3">
+                            <rect key="frame" x="244" y="361" width="51" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </switch>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="每天都叫我" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jp2-89-eLc">
+                            <rect key="frame" x="20" y="366" width="88" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="当前没有设置闹钟" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="RD8-Xi-gd8">
+                            <rect key="frame" x="0.0" y="441" width="320" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="DCr-SB-Vzc" secondAttribute="trailing" id="AXf-PZ-dYa"/>
+                        <constraint firstItem="DCr-SB-Vzc" firstAttribute="leading" secondItem="MEz-i2-6LH" secondAttribute="leading" id="Adx-gy-UcB"/>
+                        <constraint firstItem="DCr-SB-Vzc" firstAttribute="top" secondItem="MEz-i2-6LH" secondAttribute="top" id="Cxf-NS-BNS"/>
+                        <constraint firstAttribute="centerX" secondItem="pLB-NL-6P8" secondAttribute="centerX" id="Rug-CQ-Gud"/>
+                        <constraint firstItem="pLB-NL-6P8" firstAttribute="top" secondItem="DCr-SB-Vzc" secondAttribute="bottom" constant="20" id="mir-dv-7LY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.97254908084869385" green="0.97254908084869385" blue="0.97254908084869385" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MEz-i2-6LH" secondAttribute="trailing" id="1tG-iP-oUL"/>
+                <constraint firstAttribute="bottom" secondItem="MEz-i2-6LH" secondAttribute="bottom" id="5ca-Oo-AIC"/>
+                <constraint firstItem="MEz-i2-6LH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" placeholder="YES" id="S8U-gj-SWr"/>
+                <constraint firstItem="MEz-i2-6LH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ukv-Pz-WaQ"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

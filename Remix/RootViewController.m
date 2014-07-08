@@ -13,6 +13,8 @@
 #import "NewTodoItemViewController.h"
 #import "XSegmentedButton.h"
 #import "ConfigViewController.h"
+#import "NaviController.h"
+#import "ClockViewController.h"
 #import "Gobal.h"
 
 #define LEFT_NAV_SCALE 0.2
@@ -155,6 +157,11 @@ static RootViewController* instance;
     [self.leftNaviItems selectWithTag:sender.tag];
     [self changeMainViewControllerTo:self.settingVC];
     [self toggleLeftNavigationBar];
+}
+
+- (IBAction)doPresentClockVC:(id)sender {
+    ClockViewController *vc = [ClockViewController new];
+    [self.naviController pushViewController:vc animation:ViewAnimationFlip intent:nil];
 }
 
 
