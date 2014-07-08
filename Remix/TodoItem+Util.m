@@ -7,7 +7,6 @@
 //
 #import "Gobal.h"
 #import "TodoItem+Util.h"
-#import "NSDateFormatter+Util.h"
 
 @implementation TodoItem (Util)
 
@@ -48,9 +47,9 @@
 {
     NSDateFormatter *df;
     if (self.isAllDayEvent) {
-        df = [NSDateFormatter dateFormatterWithString:@"yyyy/MM/dd"];
+        df = [NSDateFormatter dateFormatterWithFormat:@"yyyy/MM/dd"];
     }else{
-        df = [NSDateFormatter defautlDateFormtter];
+        df = [NSDateFormatter dateFormatterWithFormat:DEFAULT_DATE_FORMAT];
     }
     return [df stringFromDate:self.reminderTime];
 }
@@ -82,7 +81,7 @@
         NSDateComponents *dc = [self dateComponentFromEndDate];
         return [NSString stringWithFormat:@"剩余时间：%@",[self descriptionForDateComponent:dc]];
     }else{
-        return [[NSDateFormatter defautlDateFormtter] stringFromDate:self.reminderTime];
+        return [[NSDateFormatter dateFormatterWithFormat:DEFAULT_DATE_FORMAT] stringFromDate:self.reminderTime];
     }
 }
 

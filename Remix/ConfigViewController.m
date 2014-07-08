@@ -56,7 +56,7 @@
             NSError *error = nil;
             NSMutableArray *mutableFetchResults = [[APP_DELEGATE.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
             if (mutableFetchResults == nil) {
-                [LOGGER trace:error];
+                [NSObject trace:error];
             }
             [mutableFetchResults enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 [APP_DELEGATE.managedObjectContext deleteObject:obj];
@@ -64,7 +64,7 @@
                 NSError *error = nil;
                 if (![APP_DELEGATE.managedObjectContext save:&error]) {
                     // Handle the error.
-                    [LOGGER trace:error];
+                    [NSObject trace:error];
                 }
             }];
             RNBlurModalView *blur = [[RNBlurModalView alloc] initWithTitle:@"这下好" message:@"一个事项都没了~~~"];

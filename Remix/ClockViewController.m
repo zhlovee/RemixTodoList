@@ -10,6 +10,8 @@
 #import "NaviController.h"
 #import "ALDClock.h"
 #import "Gobal.h"
+#import <AudioToolbox/AudioToolbox.h>
+
 @interface ClockViewController ()
 
 //@property (weak, nonatomic) IBOutlet UISegmentedControl *sxSegBtn;
@@ -61,7 +63,7 @@ static UIView *obj;
             if (dict) {
                 if ([[dict objectForKey:@"key"] isEqualToString:@"clock"]) {
                     _localNotify = noti;
-                    _descLabel.text = [NSString stringWithFormat:@"当前闹钟：%d:%d",noti.fireDate.hour,noti.fireDate.minute];
+                    [self setCurrentClockText:noti.fireDate isEveryDay:[[dict objectForKey:@"everyday"] boolValue]];
                     break;
                 }
             }
@@ -76,7 +78,7 @@ static UIView *obj;
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doNaviBack:(id)sender {
-    [self.naviController popViewControllerWithAnimation:ViewAnimationFlip];
+    [self.naviController popViewControllerWithAnimation:ViewAnimationCurlUp];
 }
 - (IBAction)saveCurrentSetting:(id)sender {
     if (!_localNotify) {
@@ -89,7 +91,7 @@ static UIView *obj;
     
     _localNotify.fireDate = [self createNotifyDate]; //触发通知的时间
 
-    _localNotify.repeatInterval = _cfSwitch.on ? NSCalendarUnitDay : 0; //循环次数，kCFCalendarUnitWeekday一周一次
+    _localNotify.repeatInterval = _cfSwitch.on ? NSCalendarUnitDay : NSCalendarUnitEra; //循环次数，kCFCalendarUnitWeekday一周一次
     //                }
     _localNotify.timeZone=[NSTimeZone defaultTimeZone];
     _localNotify.soundName = UILocalNotificationDefaultSoundName;
@@ -101,11 +103,22 @@ static UIView *obj;
     _localNotify.applicationIconBadgeNumber = 1; //设置app图标右上角的数字
     
     //下面设置本地通知发送的消息，这个消息可以接受
-    _localNotify.userInfo = @{@"key": @"clock"};
+    _localNotify.userInfo = @{@"key": @"clock",
+                              @"everyday":@(_cfSwitch.on)};
     //发送通知
     [[UIApplication sharedApplication] scheduleLocalNotification:_localNotify];
-    _descLabel.text = [NSString stringWithFormat:@"当前闹钟：%d:%d",_localNotify.fireDate.hour,_localNotify.fireDate.minute];
+
+    [self setCurrentClockText:_localNotify.fireDate isEveryDay:_cfSwitch.on];
     [UIAlertView showAlertWithTitle:@"本地闹钟保存成功！！！" message:@"没错"];
+}
+
+-(void)setCurrentClockText:(NSDate*)date isEveryDay:(BOOL)everyday
+{
+    if (everyday) {
+        _descLabel.text = [NSString stringWithFormat:@"当前闹钟：每天%@%d点%d分",date.hour>= 12?@"下午":@"上午",date.hour,date.minute];
+    }else{
+        _descLabel.text = [NSString stringWithFormat:@"当前闹钟：%@%d点%d分",date.hour>= 12?@"下午":@"上午",date.hour,date.minute];
+    }
 }
 
 -(NSDate *)createNotifyDate
@@ -120,8 +133,9 @@ static UIView *obj;
 #pragma mark - Clock Callback Methods
 - (void)clockDidChangeTime:(ALDClock *)clock
 {
-    self.clock.title = [NSString stringWithFormat:@"%ld:%ld",clock.hour,clock.minute];
+    self.clock.title = [NSString stringWithFormat:@"%ld:%ld",(long)clock.hour,(long)clock.minute];
     self.clock.subtitle = clock.hour >= 12 ? @"下午" : @"上午";
+    AudioServicesPlaySystemSound(1057);
 }
 
 - (void)clockDidBeginDragging:(ALDClock *)clock
@@ -133,6 +147,5 @@ static UIView *obj;
 {
     //    clock.borderColor = [UIColor colorWithRed:0.22 green:0.78 blue:0.22 alpha:1.0];
 }
-
 
 @end

@@ -46,7 +46,7 @@
     NSError *error = nil;
     NSMutableArray *mutableFetchResults = [[APP_DELEGATE.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
     if (mutableFetchResults == nil) {
-        [LOGGER trace:error];
+        [NSObject trace:error];
     }
     self.items = mutableFetchResults;
     [self.tableView reloadData];

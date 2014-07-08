@@ -37,7 +37,7 @@
     NSError *error = nil;
     if (![APP_DELEGATE.managedObjectContext save:&error]) {
         // Handle the error.
-        [LOGGER trace:error];
+        [NSObject trace:error];
     }
     
 //    if (self.item.isFinished) {

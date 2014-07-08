@@ -105,9 +105,12 @@
                             </constraints>
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eN-Zw-wTo">
-                            <rect key="frame" x="-9" y="493" width="79" height="66"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eN-Zw-wTo">
+                            <rect key="frame" x="-9" y="482" width="79" height="66"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="Kgv-X4-gB4"/>
+                            </constraints>
                             <state key="normal" image="clock_30x30.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -119,9 +122,12 @@
                     <color key="backgroundColor" red="0.67069584131240845" green="0.85009235143661499" blue="0.99928891658782959" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="A2f-WX-Bd7" secondAttribute="trailing" id="9zx-8v-nTb"/>
+                        <constraint firstAttribute="bottom" secondItem="3eN-Zw-wTo" secondAttribute="bottom" constant="20" id="L3K-VC-2fL"/>
                         <constraint firstItem="A2f-WX-Bd7" firstAttribute="top" secondItem="os8-bc-2Xa" secondAttribute="top" constant="44" id="TDI-cU-VTd"/>
+                        <constraint firstAttribute="trailing" secondItem="3eN-Zw-wTo" secondAttribute="trailing" constant="-10" id="Wgb-jG-c4l"/>
                         <constraint firstItem="A2f-WX-Bd7" firstAttribute="leading" secondItem="os8-bc-2Xa" secondAttribute="leading" id="dvx-Ln-apr"/>
                         <constraint firstAttribute="width" constant="60" id="pLG-AM-zxg"/>
+                        <constraint firstItem="3eN-Zw-wTo" firstAttribute="leading" secondItem="os8-bc-2Xa" secondAttribute="leading" constant="-9" id="sbc-S0-cbq"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAU-t3-rEm">

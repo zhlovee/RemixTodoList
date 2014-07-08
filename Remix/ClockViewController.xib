@@ -27,7 +27,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="闹钟" id="9kS-ed-yB1">
-                                    <barButtonItem key="leftBarButtonItem" title="返回" style="plain" id="jet-cP-nIz">
+                                    <barButtonItem key="leftBarButtonItem" title="返回" id="jet-cP-nIz">
                                         <connections>
                                             <action selector="doNaviBack:" destination="-1" id="VQa-Jo-vGK"/>
                                         </connections>

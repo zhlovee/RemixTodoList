@@ -5,15 +5,16 @@
 //  Created by Schiffer Li on 11/19/13.
 //  Copyright (c) 2013 Schiffer Li. All rights reserved.
 //
-#import "XLogger.h"
-#import "UIView+Util.h"
-#import "NSDateFormatter+Util.h"
-#import "NSDate+convenience.h"
+#import "SmartUtility.h"
+//#import "NSDate+convenience.h"
 //#import "IIViewDeckController.h"
 #import "RootViewController.h"
 #import "UIView+AutoLayout.h"
 #import "NaviController.h"
 #import "AppDelegate.h"
+
+#define DEFAULT_DATE_FORMAT @"yyyy/MM/dd HH:mm"
+
 
 //#define APP_STORE_URL @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=786937916"
 #define APP_STORE_URL @"https://itunes.apple.com/cn/app/todo-list/id786937916?mt=8"

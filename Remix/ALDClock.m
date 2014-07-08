@@ -227,7 +227,6 @@ const CGFloat kALDClockAnimationIncrement = 30;
 }
 
 #pragma mark - Animation Methods
-
 - (void)animateClockToHour:(NSInteger)hour minute:(NSInteger)minute
 {
     // Flag animation to prevent interations
@@ -367,7 +366,10 @@ const CGFloat kALDClockAnimationIncrement = 30;
     _minute = floor(fmod(-self.totalRotation/6.0f + 60, 60));
     
     //Redraw
-    [self updateDisplayAndListeners];
+    @autoreleasepool {
+        [self updateDisplayAndListeners];
+    }
+
 }
 
 #pragma mark - Drawing

@@ -97,7 +97,7 @@
     NSError *error = nil;
     NSMutableArray *mutableFetchResults = [[APP_DELEGATE.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
     if (mutableFetchResults == nil) {
-        [LOGGER trace:error];
+        [NSObject trace:error];
     }
     return mutableFetchResults;
 }
@@ -136,6 +136,7 @@
 {
     return self.items.count;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TodoItem *item = [self.items objectAtIndex:indexPath.row];
@@ -164,7 +165,7 @@
             NSError *error = nil;
             if (![APP_DELEGATE.managedObjectContext save:&error]) {
                 // Handle the error.
-                [LOGGER trace:error];
+                [NSObject trace:error];
             }else{
                 if (self.topPanel.currentSelectedIndex) {
                     self.unfinishedItems = [self fetchItems:NO];

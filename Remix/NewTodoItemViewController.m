@@ -156,7 +156,7 @@
 
         NSError *error = nil;
         if (![APP_DELEGATE.managedObjectContext save:&error]) {
-            [LOGGER trace:error];
+            [NSObject trace:error];
         }
         item.superItem = self.item;
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.item.subItems.count-1 inSection:0];
@@ -174,7 +174,7 @@
         self.item.createDate = [NSDate new];
         NSError *error = nil;
         if (![APP_DELEGATE.managedObjectContext save:&error]) {
-            [LOGGER trace:error];
+            [NSObject trace:error];
         }
         if (self.remindSwitch.on) {
             UILocalNotification *notification=[[UILocalNotification alloc] init];

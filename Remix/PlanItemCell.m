@@ -34,7 +34,7 @@
     _planItem = planItem;
     self.finishedBtn.selected = planItem.isFinished;
     self.planItemLabel.text = planItem.name;
-    self.planItemDateLabel.text = [[NSDateFormatter defautlDateFormtter] stringFromDate:planItem.reminderTime];
+    self.planItemDateLabel.text = [[NSDateFormatter dateFormatterWithFormat:DEFAULT_DATE_FORMAT] stringFromDate:planItem.reminderTime];
     [self applyClockCustomisations];
 }
 - (IBAction)fdssfs:(UIButton*)sender {
@@ -43,7 +43,7 @@
     NSError *error = nil;
     if (![APP_DELEGATE.managedObjectContext save:&error]) {
         // Handle the error.
-        [LOGGER trace:error];
+        [NSObject trace:error];
     }
     
     

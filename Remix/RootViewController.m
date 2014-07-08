@@ -161,7 +161,7 @@ static RootViewController* instance;
 
 - (IBAction)doPresentClockVC:(id)sender {
     ClockViewController *vc = [ClockViewController new];
-    [self.naviController pushViewController:vc animation:ViewAnimationFlip intent:nil];
+    [self.naviController pushViewController:vc animation:ViewAnimationCurlDown intent:nil];
 }
 
 
