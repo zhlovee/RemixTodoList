@@ -86,6 +86,9 @@
 		D40C3EF4196B8C55007BC3E2 /* SmartUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D40C3EF3196B8C55007BC3E2 /* SmartUtility.m */; };
 		D4482432196A2A520064B003 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4482430196A2A520064B003 /* ClockViewController.m */; };
 		D4482433196A2A520064B003 /* ClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4482431196A2A520064B003 /* ClockViewController.xib */; };
+		D478F5B9196BE569008EDA8A /* MyClock.m in Sources */ = {isa = PBXBuildFile; fileRef = D478F5B8196BE569008EDA8A /* MyClock.m */; };
+		D478F5BE196BE61C008EDA8A /* MyCustomClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D478F5BC196BE61C008EDA8A /* MyCustomClockViewController.m */; };
+		D478F5BF196BE61C008EDA8A /* MyCustomClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D478F5BD196BE61C008EDA8A /* MyCustomClockViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +224,11 @@
 		D448242F196A2A520064B003 /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
 		D4482430196A2A520064B003 /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
 		D4482431196A2A520064B003 /* ClockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockViewController.xib; sourceTree = "<group>"; };
+		D478F5B7196BE569008EDA8A /* MyClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClock.h; sourceTree = "<group>"; };
+		D478F5B8196BE569008EDA8A /* MyClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClock.m; sourceTree = "<group>"; };
+		D478F5BB196BE61C008EDA8A /* MyCustomClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomClockViewController.h; sourceTree = "<group>"; };
+		D478F5BC196BE61C008EDA8A /* MyCustomClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomClockViewController.m; sourceTree = "<group>"; };
+		D478F5BD196BE61C008EDA8A /* MyCustomClockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomClockViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +399,7 @@
 		998E12A6184F16A400E95558 /* view controller */ = {
 			isa = PBXGroup;
 			children = (
+				D478F5BA196BE5C5008EDA8A /* learnTest */,
 				998E12B9184F19EB00E95558 /* RootViewController.h */,
 				998E12BA184F19EB00E95558 /* RootViewController.m */,
 				99E908081868263300DC6BDE /* RootViewController.xib */,
@@ -551,6 +560,18 @@
 			name = clock;
 			sourceTree = "<group>";
 		};
+		D478F5BA196BE5C5008EDA8A /* learnTest */ = {
+			isa = PBXGroup;
+			children = (
+				D478F5B7196BE569008EDA8A /* MyClock.h */,
+				D478F5B8196BE569008EDA8A /* MyClock.m */,
+				D478F5BB196BE61C008EDA8A /* MyCustomClockViewController.h */,
+				D478F5BC196BE61C008EDA8A /* MyCustomClockViewController.m */,
+				D478F5BD196BE61C008EDA8A /* MyCustomClockViewController.xib */,
+			);
+			name = learnTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -636,6 +657,7 @@
 				99ACAC39187D5231003D3B14 /* trash_30x30@2x.png in Resources */,
 				992E8B8D186FF60A00F382F5 /* PlanItemCell.xib in Resources */,
 				99D24CE11877F930005D431E /* list2_30x30.png in Resources */,
+				D478F5BF196BE61C008EDA8A /* MyCustomClockViewController.xib in Resources */,
 				99A5CCF2186401D0000B09F6 /* Images.xcassets in Resources */,
 				992E8B18186A78E100F382F5 /* uncheck_30x30@2x.png in Resources */,
 				998E1282184F168600E95558 /* InfoPlist.strings in Resources */,
@@ -692,9 +714,11 @@
 				998E136118500BD600E95558 /* XCommonView.m in Sources */,
 				99EC6EFF1862834D0010A4BC /* TodoItemCell.m in Sources */,
 				998E12E9184F1CEE00E95558 /* TodoViewController.m in Sources */,
+				D478F5B9196BE569008EDA8A /* MyClock.m in Sources */,
 				998E12F6184F372F00E95558 /* NewTodoItemViewController.m in Sources */,
 				9970B2331861A58400BA695D /* XCommonViewCell.m in Sources */,
 				998E12E3184F1CAC00E95558 /* ResultViewController.m in Sources */,
+				D478F5BE196BE61C008EDA8A /* MyCustomClockViewController.m in Sources */,
 				992E8B6E186D0D7A00F382F5 /* TodoSubItem.m in Sources */,
 				998E12AF184F170C00E95558 /* NaviController.m in Sources */,
 				998E12D5184F1B5700E95558 /* IIWrapController.m in Sources */,
